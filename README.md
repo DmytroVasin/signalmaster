@@ -1,5 +1,6 @@
 # signalmaster
 
+
 A simple signaling server for clients to connect and do signaling for WebRTC.
 
 Specifically created as a default connection point for [SimpleWebRTC.js](https://github.com/HenrikJoreteg/SimpleWebRTC)
@@ -49,11 +50,11 @@ $ NODE_ENV=production node server.js
 
 ## Docker
 
-You can build this image by calling:  
+You can build this image by calling:
 
     docker build -t signalmaster https://github.com/andyet/signalmaster.git
 
-To run the image execute this:  
+To run the image execute this:
 
     docker run --name signalmaster -d -p 8888:8888 signalmaster
 
