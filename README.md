@@ -1,5 +1,12 @@
-# signalmaster
+# HEROKU:
+https://quiet-harbor-24198.herokuapp.com/socket.io/
 
+Remote:
+heroku  https://git.heroku.com/quiet-harbor-24198.git (fetch)
+heroku  https://git.heroku.com/quiet-harbor-24198.git (push)
+
+
+# signalmaster
 
 A simple signaling server for clients to connect and do signaling for WebRTC.
 

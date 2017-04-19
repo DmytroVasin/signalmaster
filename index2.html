@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://simplewebrtc.com/latest-v2.js"></script>
+        <script>
+          webrtc = new SimpleWebRTC({
+            // the id/element dom element that will hold "our" video
+            localVideoEl: 'localVideo',
+            // the id/element dom element that will hold remote videos
+            remoteVideosEl: 'remotesVideos',
+            // immediately ask for camera access
+            autoRequestMedia: true,
+            url: 'https://quiet-harbor-24198.herokuapp.com/'
+          });
+
+
+          webrtc.on('readyToCall', function(){
+            webrtc.joinRoom('23123');
+          });
+
+          webrtc.on('videoAdded', function(video, peer){
+            var remotes = document.getElementById('remotes');
+            if (remotes) {
+              var d = document.createElement('div');
+              d.className = 'videoContainer';
+              d.id = 'peer_' + peer.id;
+              d.appendChild(video);
+              var vol = document.createElement('div');
+              vol.id = 'volume_' + peer.id;
+              vol.className = 'volume_bar';
+              d.appendChild(vol);
+              remotes.appendChild(d);
+            }
+          });
+        </script>
+    </head>
+    <body>
+        <video height="300" id="localVideo"></video>
+        <div id="remotes"></div>
+        asdasd
+    </body>
+</html>
