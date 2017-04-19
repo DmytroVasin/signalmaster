@@ -1,9 +1,9 @@
 {
   "isDev": false,
   "server": {
-    "port": 8888,
+    "port": 5000,
     "/* secure */": "/* whether this connects via https */",
-    "secure": true,
+    "secure": false,
     "key": null,
     "cert": null,
     "password": null
